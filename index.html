@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mebel & Baraka | The 2035 Infinity Lab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --neon-pink: #ff007f;
+            --neon-blue: #00f2ff;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at center, #0a0a2e 0%, #000 100%);
+            color: white;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* The Animated Infinity Logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .infinity-svg {
+            width: 150px;
+            filter: drop-shadow(0 0 10px var(--neon-pink));
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px var(--neon-pink)); }
+            50% { transform: scale(1.1); filter: drop-shadow(0 0 25px var(--neon-blue)); }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            transition: 0.3s;
+        }
+
+        .glass-card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 5px;
+        }
+
+        /* Mock Video/YouTube Section */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 180px;
+            background: #111;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder::before {
+            content: "\f04b";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--neon-pink);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: transparent;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: var(--neon-blue);
+            color: #000;
+        }
+
+        .success-stat {
+            font-size: 1.5rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <svg class="infinity-svg" viewBox="0 0 100 50">
+                <path d="M30,15 C10,15 10,35 30,35 C50,35 50,15 70,15 C90,15 90,35 70,35 C50,35 50,15 30,15 Z" 
+                      fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <header>
+            <h1>MEBEL + BARAKA</h1>
+            <p class="success-stat">2035: The Singularity of Love & Code</p>
+        </header>
+
+        <nav class="nav-buttons">
+            <button onclick="alert('Syncing Love Therapy Neural Link...')">Love Therapy</button>
+            <button onclick="alert('Opening The Shared Life Log...')">Blog Feed</button>
+            <button onclick="alert('Connecting to 8K Holo-Stream...')">YouTube v.Infinity</button>
+        </nav>
+
+        <div class="glass-card">
+            <h2>The 2035 Success Report</h2>
+            <p>From CS Students to the founders of <strong>"Infinite Hearts Protocol"</strong>. Darlene and Arnold have successfully encoded the first emotional algorithm that prevents burnout in the global tech community.</p>
+            <p><em>"Our love isn't just a feeling; it's a perfectly optimized recursive function." — Arnold Baraka</em></p>
+        </div>
+
+        <div class="video-grid">
+            <div class="glass-card">
+                <div class="video-placeholder"></div>
+                <h3>Building Love in Web 5.0</h3>
+                <p>1.2M Views • 2 Hours Ago</p>
+            </div>
+            <div class="glass-card">
+                <div class="video-placeholder"></div>
+                <h3>Therapy Session: Shared Memory Banks</h3>
+                <p>890K Views • Yesterday</p>
+            </div>
+        </div>
+
+        <footer style="margin-top: 50px; opacity: 0.6;">
+            <p>Hosted on GitHub Pages | Encrypted with Love</p>
+        </footer>
+    </div>
+
+    <script>
+        // Adding floating particles for the futuristic look
+        for(let i=0; i<30; i++) {
+            let p = document.createElement('div');
+            p.style.position = 'fixed';
+            p.style.width = '2px';
+            p.style.height = '2px';
+            p.style.background = 'white';
+            p.style.top = Math.random() * 100 + 'vh';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.borderRadius = '50%';
+            p.style.opacity = Math.random();
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>
